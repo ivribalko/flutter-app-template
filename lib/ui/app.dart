@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/src/model.dart';
 import 'package:get/get.dart';
 
-class App extends StatelessWidget {
-  final model = Get.find<Model>();
+import 'home/home_page.dart';
+import 'page/page_page.dart';
+import 'routes.dart';
 
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      home: Scaffold(
-        body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Obx(() => Text('${model.count.value}')),
-              IconButton(
-                onPressed: () => model.count + 1,
-                icon: Icon(Icons.add),
-              ),
-            ],
-          ),
-        ),
-      ),
+      getPages: [
+        GetPage(name: Routes.home, page: () => HomePage()),
+        GetPage(name: Routes.page, page: () => PagePage()),
+      ],
     );
   }
 }
