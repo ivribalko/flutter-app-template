@@ -1,7 +1,15 @@
 import 'package:get/get.dart';
 
-class Model extends GetxController {
-  var count = 0.obs;
+import 'common.dart';
+
+class Model extends GetxController with Log {
+  final count = 0.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    count.listen(log.info);
+  }
 
   @override
   void onClose() {
