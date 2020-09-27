@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
+import 'ioc.dart';
 import 'ui/app.dart';
+import 'ui/common.dart';
 
 void main() {
-  runApp(App());
+  runApp(
+    CommonFutureBuilder(
+      future: Future.wait([
+        IoC.init(),
+      ]),
+      result: (_) => App(),
+    ),
+  );
 }
