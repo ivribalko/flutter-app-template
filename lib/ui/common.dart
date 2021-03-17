@@ -4,16 +4,16 @@ const Duration kDuration = Duration(milliseconds: 400);
 
 class CommonFutureBuilder<T> extends StatelessWidget {
   const CommonFutureBuilder({
-    Key key,
-    @required this.future,
-    @required this.result,
+    Key? key,
+    required this.future,
+    required this.result,
   }) : super(key: key);
 
   /// Target future to wait for.
   final Future<T> future;
 
   /// Widget to use upon future completion with its result value.
-  final Widget Function(T value) result;
+  final Widget Function(T? value) result;
 
   @override
   Widget build(BuildContext context) {

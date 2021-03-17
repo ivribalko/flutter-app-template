@@ -10,7 +10,7 @@ void main() {
       future: Future.wait([
         IoC.init(),
       ]),
-      result: (_) => App(),
+      result: (dynamic _) => App(),
     ),
   );
 }
