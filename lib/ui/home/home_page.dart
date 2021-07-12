@@ -21,7 +21,10 @@ class HomePage extends StatelessWidget {
                 icon: Icon(Icons.add),
               ),
               IconButton(
-                onPressed: () => Get.toNamed(Routes.page),
+                onPressed: () => Get.toNamed(
+                  Routes.page,
+                  arguments: model.count.value,
+                ),
                 icon: Icon(Icons.link),
               ),
             ],

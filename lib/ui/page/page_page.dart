@@ -5,12 +5,15 @@ import 'package:hive/hive.dart';
 
 class PagePage extends StatelessWidget {
   final Box save = Get.find(tag: kSave);
+  final int args = Get.arguments;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text('$args'),
+        ),
         body: Center(
           child: Switch(
             value: Get.isDarkMode,
