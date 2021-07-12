@@ -9,10 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.1.4
+  get:
+  hive:
+  hive_flutter:
 
 dev_dependencies:
-  pedantic: ^1.11.1
+  pedantic:
 
 flutter:
   uses-material-design: true
