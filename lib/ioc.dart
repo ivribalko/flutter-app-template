@@ -1,17 +1,17 @@
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:get_storage/get_storage.dart';
 import 'src/common.dart';
 import 'src/model.dart';
 import 'ui/common.dart';
 
 class IoC {
   static Future init() async {
-    await Hive.initFlutter();
+    await GetStorage.init(kSave);
 
-    Get.put(await Hive.openBox(kSave), tag: kSave)
-        .watch(key: kDarkMode)
-        .listen(setThemeMode);
+    GetStorage(kSave).listenKey(
+      kDarkMode,
+      setThemeMode,
+    );
 
     Get.put(Model());
   }
@@ -20,7 +20,7 @@ class IoC {
 void setThemeMode(x) {
   Get.changeThemeMode(
     getThemeMode(
-      Get.find(tag: kSave),
+      GetStorage(kSave),
     ),
   );
 }
