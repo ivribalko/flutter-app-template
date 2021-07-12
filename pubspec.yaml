@@ -10,7 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.1.4
-  logging: ^1.0.1
 
 dev_dependencies:
   pedantic: ^1.11.1
