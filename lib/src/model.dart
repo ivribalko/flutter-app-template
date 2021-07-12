@@ -1,14 +1,12 @@
 import 'package:get/get.dart';
 
-import 'common.dart';
-
-class Model extends GetxController with Log {
+class Model extends GetxController {
   final count = 0.obs;
 
   @override
   void onInit() {
     super.onInit();
-    count.listen(log.info);
+    count.listen((v) => Get.log('$v'));
   }
 
   @override

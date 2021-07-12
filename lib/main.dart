@@ -7,9 +7,7 @@ import 'ui/common.dart';
 void main() {
   runApp(
     CommonFutureBuilder(
-      future: Future.wait([
-        IoC.init(),
-      ]),
+      future: IoC.init(),
       result: (dynamic _) => App(),
     ),
   );

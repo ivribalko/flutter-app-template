@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/src/common.dart';
+import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 
 const Duration kDuration = Duration(milliseconds: 400);
 const double kPadding = 20.0;
 const double kBetween = 10.0;
+
+ThemeMode getThemeMode(Box save) {
+  if (save.containsKey(kDarkMode)) {
+    return save.get(kDarkMode) ? ThemeMode.dark : ThemeMode.light;
+  } else {
+    return Get.isPlatformDarkMode ? ThemeMode.dark : ThemeMode.light;
+  }
+}
 
 class CommonFutureBuilder<T> extends StatelessWidget {
   const CommonFutureBuilder({
