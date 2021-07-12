@@ -9,21 +9,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Obx(() => Text('${model.count.value}')),
-            IconButton(
-              onPressed: () => model.count + 1,
-              icon: Icon(Icons.add),
-            ),
-            IconButton(
-              onPressed: () => Get.toNamed(Routes.page),
-              icon: Icon(Icons.link),
-            ),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Obx(() => Text('${model.count.value}')),
+              IconButton(
+                onPressed: () => model.count + 1,
+                icon: Icon(Icons.add),
+              ),
+              IconButton(
+                onPressed: () => Get.toNamed(Routes.page),
+                icon: Icon(Icons.link),
+              ),
+            ],
+          ),
         ),
       ),
     );

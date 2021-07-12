@@ -8,19 +8,17 @@ class PagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            IconButton(
-              onPressed: Get.back,
-              icon: Icon(Icons.arrow_back),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Switch(
+            value: Get.isDarkMode,
+            onChanged: (x) => save.put(
+              kDarkMode,
+              !Get.isDarkMode,
             ),
-            Switch(
-              value: Get.isDarkMode,
-              onChanged: (x) => save.put(kDarkMode, !Get.isDarkMode),
-            )
-          ],
+          ),
         ),
       ),
     );
