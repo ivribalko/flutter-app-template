@@ -18,14 +18,14 @@ class HomePage extends StatelessWidget {
               Obx(() => Text('${model.count.value}')),
               IconButton(
                 onPressed: () => model.count + 1,
-                icon: Icon(Icons.add),
+                icon: const Icon(Icons.add),
               ),
               IconButton(
                 onPressed: () => Get.toNamed(
                   Routes.page,
                   arguments: model.count.value,
                 ),
-                icon: Icon(Icons.link),
+                icon: const Icon(Icons.link),
               ),
             ],
           ),

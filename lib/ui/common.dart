@@ -39,7 +39,7 @@ class CommonFutureBuilder<T> extends StatelessWidget {
         } else if (snapshot.connectionState == ConnectionState.done) {
           return result(snapshot.data);
         } else {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         }
       },
     );
