@@ -10,10 +10,25 @@ A Flutter template with sample architecture.
 
 ## 🤔 How to use
 
-- Click `Use this template` button.
+- Click `Use this template` button on GitHub.
 - Clone the new repository.
-- Run `flutter pub get`.
-- Run `flutter pub run change_app_package_name:main com.new.package.name` with desired package name.
+- Run inside repository:
+
+```bash
+flutter pub get
+```
+
+- Customize app name:
+
+```bash
+flutter pub run rename --appname "Flutter Template"
+```
+
+- Customize app id:
+
+```bash
+flutter pub run rename --bundleId com.ivribalko.flutter_app_template
+```
 
 ## 📦 Packages
 
@@ -23,7 +38,7 @@ A Flutter template with sample architecture.
 ---
 
 - [flutter_lints](https://pub.dev/packages/flutter_lints)
-- [change_app_package_name](https://pub.dev/packages/change_app_package_name)
+- [rename](https://pub.dev/packages/rename)
 
 ## 📚 Links
 
