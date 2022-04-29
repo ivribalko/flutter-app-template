@@ -1,16 +1,45 @@
-# flutter_app
+# Flutter template
 
-A new Flutter application.
+A Flutter template with sample architecture.
 
-## Getting Started
+## 🙌 Contains
 
-This project is a starting point for a Flutter application.
+- Some extensions.
+- Sample navigation.
+- Dark mode switcher.
 
-A few resources to get you started if this is your first Flutter project:
+## 🤔 How to use
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Click `Use this template` button on GitHub.
+- Clone the new repository.
+- Run inside repository:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+```
+
+- Customize app name:
+
+```bash
+flutter pub run rename --appname "Flutter Template"
+```
+
+- Customize app id:
+
+```bash
+flutter pub run rename --bundleId com.ivribalko.flutter_app_template
+```
+
+## 📦 Packages
+
+- [get](https://pub.dev/packages/get)
+- [get_storage](https://pub.dev/packages/get_storage)
+
+---
+
+- [flutter_lints](https://pub.dev/packages/flutter_lints)
+- [rename](https://pub.dev/packages/rename)
+
+## 📚 Links
+
+<https://docs.flutter.dev/>

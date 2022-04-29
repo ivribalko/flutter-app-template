@@ -1,4 +1,4 @@
-package com.rybalko.flutter_app
+package com.ivribalko.flutter_app_template
 
 import io.flutter.embedding.android.FlutterActivity
 

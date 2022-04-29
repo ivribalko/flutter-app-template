@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/src/common.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+
+import '../src/common.dart';
 
 const Duration kDuration = Duration(milliseconds: 400);
 const double kPadding = 20.0;
@@ -38,7 +39,7 @@ class CommonFutureBuilder<T> extends StatelessWidget {
         } else if (snapshot.connectionState == ConnectionState.done) {
           return result(snapshot.data);
         } else {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         }
       },
     );
