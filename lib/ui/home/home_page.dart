@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_template/src/model.dart';
 import 'package:get/get.dart';
 
+import '../../src/model.dart';
 import '../routes.dart';
 
 class HomePage extends StatelessWidget {
