@@ -2,7 +2,7 @@
 
 A Flutter template with sample architecture.
 
-## 🙌 Contains
+## 🙌 Features
 
 - Some extensions.
 - Sample navigation.
