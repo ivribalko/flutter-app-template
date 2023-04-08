@@ -46,7 +46,7 @@ class CommonFutureBuilder<T> extends StatelessWidget {
   }
 }
 
-extension TextStyleExtension on TextStyle {
+extension TextStyleExtensions on TextStyle {
   TextStyle by(double fontSize, int fontWeight) {
     return copyWith(
       fontSize: fontSize,
@@ -55,30 +55,15 @@ extension TextStyleExtension on TextStyle {
   }
 }
 
-extension Padded on Widget {
-  Widget paddedX(double x) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: x),
-      child: this,
-    );
-  }
 
-  Widget paddedY(double y) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: y),
-      child: this,
-    );
-  }
 
-  Widget paddedXY(double x, double y) {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(x, y, x, y),
-      child: this,
-    );
+extension WidgetExtensions on Widget {
+  Widget apply(Widget Function(Widget) function) {
+    return function(this);
   }
 }
 
-extension WidgetListExtension on List<Widget> {
+extension WidgetListExtensions on List<Widget> {
   List<Widget> paddingBetween({double by = kBetween}) {
     return List.generate(
       length * 2 - 1,
